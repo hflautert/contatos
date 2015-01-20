@@ -15,10 +15,10 @@ contatosApp.config(['$routeProvider',
         templateUrl: 'lista-contatos.html',
         controller: 'ContatoListCtrl'
       }).
-      when('/edit/:contatoId', {
+   /*   when('/edit/:contatoId', {
         templateUrl: 'detalhes-contato.html',
         controller: 'ContatoDetailCtrl'
-      }).
+      }). */
       otherwise({
         redirectTo: '/'
       });

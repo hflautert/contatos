@@ -2,15 +2,10 @@
 
 /* Controllers */
 
-var contatosControllers = angular.module('contatosControllers', []);
+var contatosApp = angular.module('contatosApp', []);
 
-contatosControllers.controller('ContatoListCtrl', ['$scope', 'Contato',
-  function($scope, Contato) {
-    $scope.contatos = Contato.query();
-  }]);
-
-contatosControllers.controller('ContatoDetailCtrl', ['$scope', '$routeParams', 'Contato',
-  function($scope, $routeParams, Contato) {
-    $scope.contato = Contato.get({contatoId: $routeParams.contatoId}, function(contato){
-  });
-  }]);
+contatosApp.controller('ContatoListCtrl', function ($scope,$http){
+	$http.get('apicontatos/?format=json').success(function(data) {
+	$scope.contatos =  data.results;
+	});
+});

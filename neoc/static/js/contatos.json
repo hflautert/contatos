@@ -1,0 +1,20 @@
+{
+	"count":2,
+	"next":	null,
+	"previous":null,
+	"results":[
+		{
+			"id":1,
+			"nome":"Henrique F Lauterttt",
+			"fone":"99999999",
+			"mfone":"7666666666",
+			"email":"hflautert@gmail.com"
+		},
+		{
+			"id":2,"nome":"Naiura",
+			"fone":"77777774",
+			"mfone":"7666666666",
+			"email":"nai@amor.com"
+		}
+	]
+}
