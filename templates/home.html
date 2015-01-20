@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Contatos</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'css/xeditable.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.js"></script>
+  <script src="https://code.angularjs.org/1.4.0-beta.1/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.4.0-beta.1/angular-resource.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/services.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/controllers.js' %}"></script>
+</head>
+
+<body>
+    {% verbatim %}
+    <div ng-app="contatosApp">
+
+    <h2><a href="https://github.com/surfingtux/contatos" target="_blank">Contatos</a></h2>
+    <div ng-view></div>
+  
+    <!-- CACHE FILE: lista-contatos.html -->
+    <script type="text/ng-template" id="lista-contatos.html">
+      <input type="text" ng-model="search" class="search-query" placeholder="Search">
+      <table>
+        <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Fone</th>
+          <th>MFone</th>
+          <th>Email</th>
+          <th><a href="#/new"><i class="icon-plus-sign"></i></a></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="contato in contatos | filter:search | orderBy:'nome'" ng-show="contato.id">
+          <td> {{contato.nome}} </td>
+          <td> {{contato.fone}} </td>
+          <td> {{contato.mfone}} </td>
+          <td> {{contato.email}} </td>
+          <td>
+            <a href="#/edit/{{contato.id}}"><i class="icon-pencil"></i></a>
+            <a href="#/edit/{{contato.id}}" editable-text="contato.nome" onbeforesave="updateUser($data)">{{ contato.nome }}</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </script>
+  
+    <!-- CACHE FILE: detalhes-contato.html -->
+    <script type="text/ng-template" id="detalhes-contato.html">
+      <form name="myForm">
+        <div class="control-group" ng-class="{error: myForm.nome.$invalid}">
+          <label>Nome</label>
+          <input type="text" name="nome" ng-model="contato.nome" required>
+          <span ng-show="myForm.nome.$error.required" class="help-inline">
+              Required</span>
+        </div>
+        <label>Fone</label>
+        <input type="text" name="fone" ng-model="contato.fone" required>
+        <br>
+        <label>Mfone</label>
+        <input type="text" name="mfone" ng-model="contato.mfone" required>
+        <br>
+        <label>EFone</label>
+        <input type="text" name="email" ng-model="contato.email" required>
+        <br>
+         
+        <a href="#/" class="btn">Cancel</a>
+        <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid"
+                class="btn btn-primary">Save</button>
+        <button ng-click="destroy()"
+                ng-show="contato.id" class="btn btn-danger">Delete</button>
+ 
+      </form>
+
+    </script>
+  </div>
+    {% endverbatim %}
+  </body>
+</html>
+
