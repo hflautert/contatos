@@ -6,6 +6,7 @@ var contatosApp = angular.module('contatosApp', []);
 
 contatosApp.controller('ContatoListCtrl', function ($scope,$http){
 	$http.get('apicontatos/').success(function(data) {
-	$scope.contatos =  data.results;
+		// data.results para ler os dados padroes da api do Django REST framework
+		$scope.contatos =  data.results;
 	});
 });
