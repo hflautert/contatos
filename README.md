@@ -31,5 +31,5 @@ git clone https://github.com/hflautert/contatos.git .
 ./manage.py runserver 192.168.0.9:8000
 ````
 
-Abrir no navegador http://192.168.0.9:8000/
+Abrir no navegador (alterar com seu IP) http://192.168.0.9:8000/. 
 
