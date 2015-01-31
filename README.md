@@ -1,8 +1,38 @@
-Lista de contatos WEB
-=====
-Lista de contatos WEB para substituir planilhas compartilhadas.
-Estágio de desenvolvimento, não está 100% funcional, é só um backup do projeto.
-Caso queira contribuir, entrar em contato: hflautert@gmail.com
+#Contatos
 
-- CentOS 7.x or RedHat like
-- Django 1.7
+Contatos é um aplicativo web, desenvolvido com Django, REST framework (RESTful APIs), e AngularJS.
+O objetivo é fornecer um meio eficiente para buscar contatos, bem como um modelo de base consistente, código otimizado, para reaproveitamento em diversos projetos.
+
+Estado atual do projeto:
+https://drive.google.com/file/d/0B5M9a5uJ8hbKWjQ1N1dfZ0ZCSEE/view?usp=sharing
+
+## Configuração Centos 7 - Modo rápido
+````shell
+systemctl stop firewalld
+systemctl mask firewalld
+yum install -y epel-release
+yum install -y python-pip git
+````
+## Ambiente isolado para rodar app
+````shell
+pip install virtualenv
+virtualenv contatos_env --no-site-packages
+cd contatos_env 
+source bin/activate
+````
+Estamos dentro de um ambiente isolado, podemos sair com o comando: **deactivate**
+Mas não vamos sair agora, com o ambiente isolado, vamos instalar os pacotes necessários para rodar a app:
+````shell
+pip install Django djangorestframework
+````
+## Iniciar projeto
+ ````shell
+ django-admin.py startproject gerenciador
+ cd gerenciador/
+ rm -Rf *
+ git clone https://github.com/hflautert/contatos.git .
+ ./manage.py runserver 192.168.0.9:8000
+ ````
+
+Abrir no navegador http://192.168.0.9:8000/
+
