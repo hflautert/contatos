@@ -20,19 +20,16 @@ virtualenv contatos_env --no-site-packages
 cd contatos_env 
 source bin/activate
 ````
-Estamos dentro de um ambiente isolado, podemos sair com o comando: **deactivate**
-Mas não vamos sair agora, com o ambiente isolado, vamos instalar os pacotes necessários para rodar a app:
+Estamos dentro de um ambiente isolado, após finalizar, podemos sair com o comando: **deactivate**
+## Instalar pacotes e iniciar projeto
 ````shell
 pip install Django djangorestframework
+django-admin.py startproject gerenciador
+cd gerenciador/
+rm -Rf *
+git clone https://github.com/hflautert/contatos.git .
+./manage.py runserver 192.168.0.9:8000
 ````
-## Iniciar projeto
- ````shell
- django-admin.py startproject gerenciador
- cd gerenciador/
- rm -Rf *
- git clone https://github.com/hflautert/contatos.git .
- ./manage.py runserver 192.168.0.9:8000
- ````
 
 Abrir no navegador http://192.168.0.9:8000/
 
