@@ -42,7 +42,7 @@ yum install -y httpie
 
 Adcionar contato:
 ````shell
-[root@localhost ~]# http --form POST http://192.168.0.9:8000/apicontatos/ nome="Novo Contato" fone="54-3333-7777" mfone="54-9999-3333" email="novo@mail.com.br"
+http --fjson POST http://192.168.0.9:8000/apicontatos/ nome="Novo Contato" fone="54-3333-7777" mfone="54-9999-3333" email="novo@mail.com.br"
 ````
 
 Atualizar contato, especificar ID (Ex: apicontatos/1/) e prencher informações a serem alteradas:
