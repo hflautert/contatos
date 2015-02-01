@@ -33,3 +33,24 @@ git clone https://github.com/hflautert/contatos.git .
 
 Abrir no navegador (alterar com seu IP) http://192.168.0.9:8000/. 
 
+
+## Manipulação de dados no shell via APIs:
+Instalar httpie:
+````shell
+yum install -y httpie
+````
+
+Adcionar contato:
+````shell
+[root@localhost ~]# http --form POST http://192.168.0.9:8000/apicontatos/ nome="Novo Contato" fone="54-3333-7777" mfone="54-9999-3333" email="novo@mail.com.br"
+````
+
+Atualizar contato, especificar ID (Ex: apicontatos/1/) e prencher informações a serem alteradas:
+````shell
+http --json PUT http://192.168.0.9:8000/apicontatos/1/ nome="Contato Alterado" fone="54-3333-7777" mfone="54-9999-3333" email="novo@mail.com.br"
+````
+
+Remover contato, especificar ID (Ex: apicontatos/16/):
+````shell
+http --json DELETE http://192.168.0.9:8000/apicontatos/16/
+````
