@@ -1,7 +1,7 @@
 #Contatos
 
 Contatos é um aplicativo web, desenvolvido com Django, REST framework (RESTful APIs), e AngularJS.
-O objetivo é fornecer um meio eficiente para buscar contatos, bem como um modelo de base consistente e código otimizado, para reaproveitamento em projetos diversos.
+O objetivo é fornecer um meio eficiente para buscar contatos, bem como um modelo de base consistente e código otimizado para reaproveitamento em projetos diversos.
 
 Estado atual do projeto:
 https://drive.google.com/file/d/0B5M9a5uJ8hbKWjQ1N1dfZ0ZCSEE/view?usp=sharing
