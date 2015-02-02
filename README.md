@@ -56,3 +56,14 @@ Especificar ID (Ex: apicontatos/16/):
 ````shell
 http --json DELETE http://192.168.0.9:8000/apicontatos/16/
 ````
+
+# Versões:
+O projeto avançou, se quiser entender somente a manipulação das api via $http do AngularJS, volte para a versão 1_raw_api:
+````shell
+git checkout -f 1_raw_api
+````
+Para retornar à última versão:
+
+````shell
+git checkout master
+````
