@@ -23,6 +23,7 @@
 				<th>Telefone</th>
 				<th>Mfones</th>
 				<th>Email</th>
+				<th></th>
 			</tr>
 		</thead>
 		<!-- Table Body -->
@@ -44,6 +45,7 @@
 					<a href="#" editable-text="contato.email" onbeforesave="updateUser($data)">
 					{{ contato.email || 'empty' }}</a></div>
 				</td>
+				<td><span class="glyphicon glyphicon-trash" aria-hidden="true" ng-click='ContatoDelItem(contato_item)'></span></td>
 			</tr>
 		</tbody>
 	</center>

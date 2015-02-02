@@ -58,7 +58,7 @@ http --json DELETE http://192.168.0.9:8000/apicontatos/16/
 ````
 
 # Versões:
-O projeto avançou, se quiser entender somente a manipulação das api via $http do AngularJS, volte para a versão 1_raw_api:
+O projeto avançou, se quiser entender somente a manipulação das APIs (REST framework) via $http do AngularJS, volte para a versão 1_raw_api:
 ````shell
 git checkout -f 1_raw_api
 ````
