@@ -23,7 +23,7 @@
 				<th>Telefone</th>
 				<th>Mfones</th>
 				<th>Email</th>
-				<th></th>
+				<th><a class="glyphicon glyphicon-plus" href="#/new"></a></th>
 			</tr>
 		</thead>
 		<!-- Table Body -->
@@ -46,7 +46,7 @@
 					{{ contato.email || 'empty' }}</a></div>
 				</td>
              			<td><div ng-controller="ContatoDelItem">
-					<a class='glyphicon glyphicon-trash' href='/' ng-click='updateUser($data)'></a></div>
+					<a class="glyphicon glyphicon-trash" href="/" ng-click="updateUser($data)"></a></div>
 				</td>
 			</tr>
 		</tbody>
