@@ -4,7 +4,7 @@ Contatos é um aplicativo web, desenvolvido com Django, REST framework (RESTful 
 O objetivo é fornecer um meio eficiente para buscar contatos, bem como um modelo de base consistente e código otimizado para reaproveitamento em projetos diversos.
 
 Estado atual do projeto:
-https://drive.google.com/file/d/0B5M9a5uJ8hbKWjQ1N1dfZ0ZCSEE/view?usp=sharing
+https://drive.google.com/file/d/0B5M9a5uJ8hbKVzl4Q2lWTzlEa2M/view?usp=sharing
 
 ## Configuração Centos 7 - Modo rápido
 ````shell
