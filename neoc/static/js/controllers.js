@@ -66,6 +66,12 @@ contatosApp.controller('ContatoEditEmail', function($scope, $http) {
 	};
 });
 
+contatosApp.controller('ContatoDelItem', function($scope, $http) {
+        $scope.updateUser = function(data) {
+		return $http.delete( 'apicontatos/'+$scope.contato.id+'/',{});
+	};
+});
+
 // Altera thema do Xeditable
 contatosApp.run(function(editableOptions) {
   editableOptions.theme = 'bs3';

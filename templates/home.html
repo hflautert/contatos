@@ -45,7 +45,9 @@
 					<a href="#" editable-text="contato.email" onbeforesave="updateUser($data)">
 					{{ contato.email || 'empty' }}</a></div>
 				</td>
-				<td><span class="glyphicon glyphicon-trash" aria-hidden="true" ng-click='ContatoDelItem(contato_item)'></span></td>
+             			<td><div ng-controller="ContatoDelItem">
+					<a class='glyphicon glyphicon-trash' href='/' ng-click='updateUser($data)'></a></div>
+				</td>
 			</tr>
 		</tbody>
 	</center>
